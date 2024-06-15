@@ -18,7 +18,7 @@ func (e ErrStackTrace) Error() string {
 	return msg
 }
 
-func (e ErrStackTrace) Unwarp() error {
+func (e ErrStackTrace) Unwrap() error {
 	return e.cause
 }
 
