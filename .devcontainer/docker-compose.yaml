@@ -1,0 +1,12 @@
+services:
+  test-lib:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - UID=${UID}
+    volumes:
+      - ..:/go/app
+    tty: true
+    stdin_open: true
+    entrypoint: ['/bin/bash']
